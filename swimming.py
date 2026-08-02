@@ -446,5 +446,14 @@ class SwimmingPortalApp(ctk.CTk):
 
 
 if __name__ == "__main__":
-    app = SwimmingPortalApp()
-    app.mainloop()
+    try:
+        app = SwimmingPortalApp()
+        app.mainloop()
+    except Exception as e:
+        import traceback
+        print("\n" + "="*50)
+        print("CRITICAL ERROR UPON STARTUP:")
+        print("="*50)
+        traceback.print_exc()
+        print("="*50)
+        input("\nAn error occurred. Press Enter to close this window...")
