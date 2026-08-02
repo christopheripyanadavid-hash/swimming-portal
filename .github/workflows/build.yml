@@ -22,7 +22,7 @@ jobs:
 
     - name: Build Executable with PyInstaller
       run: |
-        pyinstaller --onefile --noconsole --collect-all customtkinter swimming.py
+        pyinstaller --onefile --collect-all customtkinter swimming.py
 
     - name: Upload Executable Artifact
       uses: actions/upload-artifact@v4
